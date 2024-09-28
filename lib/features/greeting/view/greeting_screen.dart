@@ -1,15 +1,13 @@
 import 'package:detective_goat/features/greeting/view/login_screen.dart';
 import 'package:detective_goat/widgets/custom_button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class GreetingScreen extends StatelessWidget {
   const GreetingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // final deviceSize = MediaQuery.of(context).size;
-    // final width = deviceSize.width;
-    // final height = deviceSize.height;
     return Column(
       children: [
         const SizedBox(
@@ -64,9 +62,7 @@ class GreetingScreen extends StatelessWidget {
           child: CustomButtonWidget(
               text: "LET'S FIND OUT",
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const LoginScreen();
-                }));
+                Get.to(() => const LoginScreen());
               }),
         ),
       ],

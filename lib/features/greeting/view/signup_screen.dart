@@ -1,14 +1,11 @@
-import 'package:detective_goat/features/greeting/view/create_account_screen.dart';
-import 'package:detective_goat/features/greeting/view/signup_screen.dart';
 import 'package:detective_goat/widgets/custom_button_widget.dart';
 import 'package:detective_goat/widgets/form_container_widget.dart';
 import 'package:detective_goat/widgets/outline_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:get/route_manager.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +17,7 @@ class LoginScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Login ',
+                'Sign Up',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(
@@ -56,9 +53,7 @@ class LoginScreen extends StatelessWidget {
                 children: [
                   const Text('Don\'t have an account?'),
                   TextButton(
-                    onPressed: () {
-                      Get.to(() => const CreateAccountScreen());
-                    },
+                    onPressed: () {},
                     child: const Text('Sign Up'),
                   ),
                 ],
