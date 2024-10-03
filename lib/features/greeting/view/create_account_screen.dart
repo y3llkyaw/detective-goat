@@ -1,6 +1,8 @@
+import 'package:detective_goat/features/greeting/view/signup_email_screen.dart';
 import 'package:detective_goat/widgets/outline_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/route_manager.dart';
 
 class CreateAccountScreen extends StatelessWidget {
   const CreateAccountScreen({super.key});
@@ -10,7 +12,7 @@ class CreateAccountScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 30),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -56,7 +58,13 @@ class CreateAccountScreen extends StatelessWidget {
               asset: "assets/images/facebook.svg",
             ),
             OutlineButtonWidget(
-                text: "Sign up with Email", onPressed: () {}, height: 60),
+              text: "Sign up with Email",
+              onPressed: () {
+                Get.to(() => const SignupEmailScreen());
+              },
+              height: 60,
+              asset: "assets/images/email.svg",
+            ),
             const SizedBox(),
             const SizedBox(),
           ],

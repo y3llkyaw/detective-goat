@@ -1,10 +1,8 @@
 import 'package:detective_goat/features/greeting/view/create_account_screen.dart';
-import 'package:detective_goat/features/greeting/view/signup_screen.dart';
 import 'package:detective_goat/widgets/custom_button_widget.dart';
 import 'package:detective_goat/widgets/form_container_widget.dart';
 import 'package:detective_goat/widgets/outline_button_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/route_manager.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -23,11 +21,8 @@ class LoginScreen extends StatelessWidget {
                 'Login ',
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
-              const SizedBox(
-                height: 20,
-              ),
               SizedBox(
-                height: 220,
+                height: MediaQuery.of(context).size.height / 4,
                 width: double.infinity,
                 child: Image.asset('assets/images/login_account.png'),
               ),
